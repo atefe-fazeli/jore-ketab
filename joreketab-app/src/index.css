@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Iransans;
+  src: url(../src/assets/ttf/IRANSansWeb.ttf);
+}
+@font-face {
+  font-family: 'aseman';
+  src: url(../src/assets/g\ aseman.ttf);
+}
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #000037;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Iransans;
+  background-color:  #fcfcfa;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+input{
+  font-family: Iransans;
+}
+input::placeholder{
+  font-family: Iransans;
+  color: #b7bca7;
+}
+a{
+  cursor: pointer;
+}

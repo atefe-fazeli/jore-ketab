@@ -1,0 +1,16 @@
+
+
+.header{
+    background-color: #90ae3e;
+    display: flex;
+    justify-content: center;
+}
+
+.headerTitle{
+    font-family: 'aseman';
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin: .5rem;
+}
