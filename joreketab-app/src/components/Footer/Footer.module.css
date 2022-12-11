@@ -1,0 +1,48 @@
+.footerMainContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    padding: 0 10%;
+}
+.footerSectionOne{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Description{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Description p{
+word-wrap: break-word;
+}
+.ContactLinks{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+}
+.OfferBooks{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.footerSectionOne div:last-child{
+    width: 20%;display: flex;
+    flex-direction: column;
+}
+.footerSectionTwo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.footerSectionTwo div:nth-child(2){
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+.footerSectionTwo div:nth-child(1){
+    width: 45%;
+}
