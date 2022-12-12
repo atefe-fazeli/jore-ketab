@@ -4,14 +4,21 @@
     flex-wrap: wrap;
     /* justify-content: center; */
     padding: 0 10%;
+    direction: rtl;
+}
+hr{
+    width: 100%;
+    margin: 1rem 0;
 }
 .footerSectionOne{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 .Description{
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -37,12 +44,20 @@ word-wrap: break-word;
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 .footerSectionTwo div:nth-child(2){
-    width: 45%;
+
+}
+.footerSectionTwo div:nth-child(2) ul{
     display: flex;
-    justify-content: space-between;
+}
+.footerSectionTwo div:nth-child(2) ul li{
+    margin-left: 1rem;
+}
+.footerSectionTwo div:nth-child(2) ul li a{
+    font-size: 1.5rem;
 }
 .footerSectionTwo div:nth-child(1){
-    width: 45%;
+
 }

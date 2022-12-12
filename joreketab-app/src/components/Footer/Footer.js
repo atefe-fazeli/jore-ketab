@@ -1,5 +1,17 @@
 import React from 'react';
 import styles from "./Footer.module.css";
+import { BiMap } from 'react-icons/bi';
+import { FiInstagram } from 'react-icons/fi';
+import { FaTwitter } from 'react-icons/fa';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { FaYoutube } from 'react-icons/fa';
+import { FaTelegramPlane } from 'react-icons/fa';
+
+
+
+
+
+
 
 const Footer = () => {
     return (
@@ -57,14 +69,12 @@ const Footer = () => {
             </div>
             <div>
                 <ul>
-                    <li><a>1</a></li>
-                    <li><a>12</a></li>
-                    <li><a>123</a></li>
-                    <li><a>1234</a></li>
-                    <li><a>12345</a></li>
-                    <li><a>123456</a></li>
-                    <li><a>1234567</a></li>
-                    <li><a>12345678</a></li>
+                    <li><a><FaTelegramPlane /></a></li>
+                    <li><a><FaYoutube /></a></li>
+                    <li><a><AiFillLinkedin /></a></li>
+                    <li><a><FaTwitter /></a></li>
+                    <li><a><FiInstagram /></a></li>
+                    <li><a><BiMap /></a></li>
                 </ul>
             </div>
            </div>

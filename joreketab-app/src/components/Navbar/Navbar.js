@@ -31,7 +31,7 @@ const Navbar = () =>{
 
             <div className={styles.navbarLeftSide}>
                < FiShoppingBag className={styles.navbarShopIcon}/>
-               <a>ورود</a>
+                <Link to="/login">ورود</Link>
             </div>
 
         </div>

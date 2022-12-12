@@ -38,3 +38,6 @@ input::placeholder{
 a{
   cursor: pointer;
 }
+ul{
+  list-style: none;
+}
