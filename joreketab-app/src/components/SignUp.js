@@ -18,6 +18,14 @@ const SignUp = () => {
     });
     const [errors, setErrors] = useState({});
     const [touched, setTouched] = useState({});
+    const [userInfo,setUserInfo] =useState([
+        {
+            name: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+        }
+    ])
 
     useEffect(() => {
         setErrors(validate(data, "signup"))
@@ -29,6 +37,11 @@ const SignUp = () => {
         } else {
             setData({ ...data, [event.target.name]: event.target.value })
         }
+       
+        if(event.target.name==="name"){
+            setUserInfo([...userInfo,userInfo.name=event.target.value])
+        }
+
     }
 
     const focusHanlder = event => {

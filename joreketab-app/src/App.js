@@ -1,4 +1,6 @@
 import './App.css';
+import BooksContextProvider from "./context/BooksContextProvider.js"
+import Store from './components/Store';
 import {
   BrowserRouter,
   Routes,
@@ -21,6 +23,10 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
+    <BooksContextProvider>
+                <Store />
+    </BooksContextProvider>
+    
     </div>
   );
 }

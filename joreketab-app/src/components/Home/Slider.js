@@ -7,19 +7,14 @@ import styles from "./Slider.module.css";
 import './Customslider.css';
 import book1 from "../../assets/images/2.png";
 import book2 from "../../assets/images/Frame 3.png";
-import { Axios } from 'axios';
+import getBooks from '../services/api';
 
 
 
 const Slider = () => {
 
+getBooks();
 
-  const axios = require('axios');
-  axios.get('https://api.itbook.store/1.0/search/mongodb')
-  .then(resp => {
-      console.log(resp.data);
-       });
-   
     return (
         <div className={styles.swiperMainContainer}>
           <Swiper
