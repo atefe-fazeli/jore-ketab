@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Books =({bookData})=>{
 
@@ -6,9 +7,9 @@ const Books =({bookData})=>{
 
     return(
         <div>
-         <image>{bookData.image}</image>
+         <img src={bookData.image}/>
          <h1>{bookData.title}</h1>
-         <h1>{bookData.price}</h1>
+         <Link to="/details">details</Link>
         </div>
     );
 };

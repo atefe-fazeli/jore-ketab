@@ -1,6 +1,4 @@
 import './App.css';
-import BooksContextProvider from "./context/BooksContextProvider.js"
-import Store from './components/Store';
 import {
   BrowserRouter,
   Routes,
@@ -11,6 +9,7 @@ import {
 import SignUp from '../src/components/SignUp';
 import Login from '../src/components/Login';
 import Home from './components/Home/Home';
+import Details from './components/Details/Details';
 
 
 function App() {
@@ -21,12 +20,9 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
     </BrowserRouter>
-    <BooksContextProvider>
-                <Store />
-    </BooksContextProvider>
-    
     </div>
   );
 }
