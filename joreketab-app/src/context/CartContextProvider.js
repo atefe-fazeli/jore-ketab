@@ -13,33 +13,66 @@ const initialState={
 
 
 function bookreducer(state,action) {
+
+  
     switch (action.type) {
       case 'ADD':
         state.selectedItems.push({...action.peyload,quantity:1});
+        console.log("ADD");
+        console.log(state)
         return { ...state,...state.selectedItems};
+    
+        
       case 'INCREASE':
-       state.selectedItems.map((item)=>item.id===action.peyload.id?item.quantity + 1)
+        const indexI=state.selectedItems.findIndex((item)=>item.id===action.peyload.id);
+        state.selectedItems[indexI].quantity++;
+        console.log("INCREASE");
+        console.log(state);
+        return { ...state,...state.selectedItems};
+    
 
         
       case 'REMOVE':
-        return { isRunning: false, time: 0 };
+        state.selectedItems.filter(item=>item.id===action.peyload.id);
+        return { ...state,...state.selectedItems};
+      
+
+
       case 'DECREASE':
-        return { ...state, time: state.time + 1 };
+        const indexJ=state.selectedItems.findIndex((item)=>item.id===action.peyload.id);
+        state.selectedItems[indexJ].quantity--;
+        return { ...state,...state.selectedItems};
+      
+
+
+
       case 'CHECKOUT':
-        return { ...state, time: state.time + 1 };
+        return{ 
+          selectedItems:[],
+          itemcounter:0,
+          total:0,
+          checkout:true,
+        };
+
       case 'CLEAR':
-        return { ...state, time: state.time + 1 };
+        return{ 
+        selectedItems:[],
+        itemcounter:0,
+        total:0,
+        checkout:false,
+      };
+
       default:
         throw new Error();
     }
   }
 
-const CartContext=createContext()
+export const CartContext=createContext()
 const CartContextProvider =({children})=>{
     const [state, dispatch] = useReducer(bookreducer, initialState);
     return(
          
-                <CartContext.Provider value={{state:state,dispatch:dispatch}}>
+                <CartContext.Provider value={{state,dispatch}}>
                   {children}
 
                 </CartContext.Provider>
