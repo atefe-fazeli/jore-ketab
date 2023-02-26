@@ -17,31 +17,36 @@ function bookreducer(state,action) {
   
     switch (action.type) {
       case 'ADD':
-        state.selectedItems.push({...action.peyload,quantity:1});
-        console.log("ADD");
-        console.log(state)
-        return { ...state,...state.selectedItems};
-    
+        if(!state.selectedItems.find(item=>item.id===action.payload.id)){
+          state.selectedItems.push({...action.peyload,quantity:1});
+          console.log("ADD");
+          console.log(state.selectedItems)
+        }
+        return { ...state,selectedItems:[...state.selectedItems]};
+
         
       case 'INCREASE':
         const indexI=state.selectedItems.findIndex((item)=>item.id===action.peyload.id);
         state.selectedItems[indexI].quantity++;
         console.log("INCREASE");
         console.log(state);
-        return { ...state,...state.selectedItems};
+        return { ...state,selectedItems:[...state.selectedItems]};
     
 
         
       case 'REMOVE':
-        state.selectedItems.filter(item=>item.id===action.peyload.id);
-        return { ...state,...state.selectedItems};
+        const newselectedItems =state.selectedItems.filter(item=>item.id!==action.peyload.id);
+        console.log("REMOVE");
+        console.log(newselectedItems);
+        state.selectedItems=newselectedItems;
+        return ({ ...state,selectedItems:newselectedItems});
       
 
 
       case 'DECREASE':
         const indexJ=state.selectedItems.findIndex((item)=>item.id===action.peyload.id);
         state.selectedItems[indexJ].quantity--;
-        return { ...state,...state.selectedItems};
+        return ({...state ,selectedItems:[...state.selectedItems]});
       
 
 
@@ -72,7 +77,7 @@ const CartContextProvider =({children})=>{
     const [state, dispatch] = useReducer(bookreducer, initialState);
     return(
          
-                <CartContext.Provider value={{state,dispatch}}>
+                <CartContext.Provider value={{state:state,dispatch:dispatch}}>
                   {children}
 
                 </CartContext.Provider>

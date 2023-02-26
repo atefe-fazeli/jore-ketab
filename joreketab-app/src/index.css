@@ -41,6 +41,7 @@ input::placeholder{
 }
 a{
   cursor: pointer;
+  text-decoration: none;
 }
 ul{
   list-style: none;
