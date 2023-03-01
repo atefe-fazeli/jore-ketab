@@ -8,15 +8,18 @@ const Books =({bookData})=>{
     const {state,dispatch}=useContext(CartContext);
     return(
         <div className="BookMainContainer">
-            
-            <div class="img-container">
-                  <div className="inner-skew">
-                       <img src={bookData.image} alt="img"/>
-                  </div>
-            </div>
-         
-           <div className="text-container">
+           <div className="Info">
+              <div className="LeftSide">
+                <img src={bookData.image} alt="img"/>
+              </div>
+              <div className="RighttSide">
                 <p>{bookData.title}</p>
+              </div>
+           </div>
+
+         
+           <div className="BtnContainer">
+
                 <div>
                     {/* {
                         Isincart(state,bookData.isbn13)?<button onClick={()=>{dispatch({type:"INCREASE",payload:bookData})}}>+</button>
