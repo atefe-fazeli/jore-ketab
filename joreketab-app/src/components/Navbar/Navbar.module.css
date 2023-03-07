@@ -20,7 +20,7 @@
 }
 .navbarTitle p span{
 font-weight: 700;
-color: #90ae3e; 
+color:var(--green); 
 margin-left: .3rem; 
 }
 .navbarList ul{

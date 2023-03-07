@@ -46,3 +46,10 @@ a{
 ul{
   list-style: none;
 }
+
+/* colors  */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff; 
+  --green:#90ae3e;
+}

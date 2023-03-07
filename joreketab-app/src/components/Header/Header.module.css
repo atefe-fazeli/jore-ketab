@@ -1,7 +1,7 @@
 
 
 .header{
-    background-color: #90ae3e;
+    background-color:var(--green);
     display: flex;
     justify-content: center;
 }
